@@ -1,4 +1,4 @@
-# CSE-1112
+# CSE-2216
 
 ## Purpose of the repository
 This repository provides codes related to the course CSE-1112 (Data Structure & Algorithms I laboratory)
