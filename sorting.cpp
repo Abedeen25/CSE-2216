@@ -32,6 +32,23 @@ void bubble_sort(int array[], int size){
     cout << "Sorted with Bubble Sort" << endl;
 }
 
+void selection_sort(int array[], int size){
+    for(int i = 0; i < size-1; i++){
+        int smallest_in = i;
+
+        for(int j = i+1; j < size; j++ ){
+            if(array[smallest_in] > array[j]){
+                smallest_in = j;
+            }
+        }
+
+        if(smallest_in != i) {
+            swap(&array[i], &array[smallest_in]);
+        }
+    }
+    cout << "Sorted with Selection Sort" << endl;
+}
+
 
 void print_array(int array[], int size){
     for(int i=0; i < size; i++){
@@ -45,8 +62,8 @@ int main(){
     int size_of_array = sizeof(data) / sizeof(data[0]); // figure out the number of elements in the array
 
     //call your sorting function here
-    bubble_sort(data,size_of_array);
-//    selection_sort(data, size_of_array);
+//    bubble_sort(data,size_of_array);
+    selection_sort(data, size_of_array);
 //    insertion_sort(data, size_of_array);
     print_array(data, size_of_array);
      return 0;
