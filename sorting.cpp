@@ -49,6 +49,19 @@ void selection_sort(int array[], int size){
     cout << "Sorted with Selection Sort" << endl;
 }
 
+void insertion_sort(int array[], int size){
+    for(int i = 1; i < size; i++){
+        int key = array[i];
+        int j = i-1;
+
+        while(key < array[j] && j >= 0){
+            swap(&array[j], &array[j+1]);
+            j--;
+        }
+    }
+    cout << "Sorted with Insertion Sort" << endl;
+}
+
 
 void print_array(int array[], int size){
     for(int i=0; i < size; i++){
