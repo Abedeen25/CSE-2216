@@ -75,8 +75,8 @@ int main(){
     int size_of_array = sizeof(data) / sizeof(data[0]); // figure out the number of elements in the array
 
     //call your sorting function here
-    bubble_sort(data,size_of_array);
-//    selection_sort(data, size_of_array);
+//    bubble_sort(data,size_of_array);
+    selection_sort(data, size_of_array);
 //    insertion_sort(data, size_of_array);
     print_array(data, size_of_array);
      return 0;
