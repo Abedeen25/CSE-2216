@@ -31,7 +31,33 @@ void print_array(int array[], int size){
 }
 //-----------------<Utility>-------------------
 
+int linear_search(int array[], int size, int target){
+    for(int i = 0; i < size ; i++){
+        if(array[i]==target){
+            return i;
+        }
+    }
+    return -1;
+}
 
+int binary_search(int array[], int size, int target){
+    int left = 0;
+    int right = size;
+    int mid;
+    while(left <= right){
+        mid = (left + right)/2;
+
+        if(array[mid] == target){
+            return mid;
+        }
+        else if(array[mid] > target){
+            right = mid - 1;
+        }else {
+            left = mid + 1;
+        }
+    }
+    return -1;
+}
 
 
 int main(){
@@ -48,7 +74,7 @@ int main(){
 
     int locale;
 //    locale = linear_search(data, size_of_array, target);
-//    locale = binary_search(data,size_of_array, target);
+    locale = binary_search(data,size_of_array, target);
     if(locale < 0){
         cout << "The item doesn't exist in the array!" << endl;
     }else{
