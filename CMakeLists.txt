@@ -3,5 +3,4 @@ project(CSE_1112)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CSE_1112
-        Searching.cpp)
+add_executable(CSE_1112 Searching.cpp)
